@@ -3,3 +3,5 @@
 1. clone the git repo
 2. npm install
 3. npm run dev
+
+## Deployed link : https://editogram.vercel.app/
