@@ -94,8 +94,6 @@ const Canvas = () => {
                                 className={`inline-block p-3 m-2 rounded-xl cursor-pointer ${selectedEle && selectedEle == ele ? 'bg-blue-300' : 'bg-gray-400'}`}
 
                                 style={{ fontSize: `${ele.size}px` , fontFamily: ele.font , color: ele.color}}
-
-                                onClick={() => handleSelect(ele.id)}
                             >
 
                                 {ele.text}
@@ -214,7 +212,7 @@ const Canvas = () => {
 
                 </div>
 
-                <div className={`flex max-sm:flex-col gap-2 sm:border-2 sm:border-slate-400 sm:p-4 p-2 sm:rounded-full ${selectedEle ? 'bg-white' : 'bg-slate-100'}`}>
+                <div className={`flex max-sm:flex-col gap-2 sm:border-2 sm:border-slate-400 sm:p-4 p-2 sm:rounded-full ${selectedEle ? 'sm:bg-white' : 'bg-slate-100'}`}>
 
                     <input
                         type="text"
