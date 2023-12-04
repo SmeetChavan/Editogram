@@ -7,13 +7,13 @@ const App = () => {
 
     <section>
 
-      <section className='px-16 py-8'>
+      <section className='sm:px-16 py-8'>
 
         <NavBar/>
 
       </section>
 
-      <section className='px-16 py-8'>
+      <section className='sm:px-16 py-8'>
 
         <Canvas/>
 

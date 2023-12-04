@@ -84,7 +84,7 @@ const Canvas = () => {
 
         <section className='flex max-lg:flex-col justify-between gap-10'>
 
-            <div className='relative w-3/5 max-lg:w-full min-h-screen bg-slate-300 p-10 rounded-3xl shadow-xl'>
+            <div className='relative w-3/5 max-lg:w-full min-h-screen bg-slate-300 sm:p-10 p-4 rounded-3xl shadow-xl'>
 
                 {
                     elements && elements.map((ele) => (
@@ -114,7 +114,7 @@ const Canvas = () => {
 
                     <label
                         htmlFor="font"
-                        className='text-xl font-ubuntu font-semibold'
+                        className='sm:text-xl text-lg font-ubuntu font-semibold'
                     >
                         Font :
                     </label>
@@ -125,7 +125,7 @@ const Canvas = () => {
                         value={selectedEle ? selectedEle.font : ''}
                         onChange={(e) => handleFontChange(e)}
                         disabled={!selectedEle}
-                        className={`${selectedEle ? 'bg-white' : 'bg-slate-100 cursor-not-allowed'} w-3/5 p-2 rounded-xl focus:outline-none`}
+                        className={`${selectedEle ? 'bg-white' : 'bg-slate-100 cursor-not-allowed'} sm:w-3/5 w-1/2 p-2 rounded-xl focus:outline-none`}
                     >
                         <option value="">Select Font</option>
 
@@ -147,7 +147,7 @@ const Canvas = () => {
 
                     <label
                         htmlFor="color"
-                        className='text-xl font-ubuntu font-semibold'
+                        className='sm:text-xl text-lg font-ubuntu font-semibold'
                     >
                         Color :
                     </label>
@@ -158,7 +158,7 @@ const Canvas = () => {
                         value={selectedEle ? selectedEle.color : ''}
                         onChange={(e) => handleColorChange(e)}
                         disabled={!selectedEle}
-                        className={`${selectedEle ? 'bg-white' : 'bg-slate-100 cursor-not-allowed'} w-3/5 p-2 rounded-xl focus:outline-none`}
+                        className={`${selectedEle ? 'bg-white' : 'bg-slate-100 cursor-not-allowed'} sm:w-3/5 w-1/2 p-2 rounded-xl focus:outline-none`}
                     >
 
                         <option value="">Select Color</option>
@@ -168,7 +168,6 @@ const Canvas = () => {
                                 <option
                                     key={color}
                                     value={color}
-                                    className=''
                                 >
                                     {color}
                                 </option>
@@ -183,7 +182,7 @@ const Canvas = () => {
 
                     <label
                         htmlFor="size"
-                        className='text-xl font-ubuntu font-semibold'
+                        className='sm:text-xl text-lg font-ubuntu font-semibold'
                     >
                         Size :
                     </label>
@@ -194,7 +193,7 @@ const Canvas = () => {
                         value={selectedEle ? selectedEle.size : ''}
                         onChange={(e) => handleSizeChange(e)}
                         disabled={!selectedEle}
-                        className={`${selectedEle ? 'bg-white' : 'bg-slate-100 cursor-not-allowed'} w-3/5 p-2 rounded-xl focus:outline-none`}
+                        className={`${selectedEle ? 'bg-white' : 'bg-slate-100 cursor-not-allowed'} sm:w-3/5 w-1/2 p-2 rounded-xl focus:outline-none`}
                     >
 
                         <option value="">Select Size</option>
@@ -215,7 +214,7 @@ const Canvas = () => {
 
                 </div>
 
-                <div className={`flex gap-2 border-2 border-slate-400 p-4 rounded-full ${selectedEle ? 'bg-white' : 'bg-slate-100'}`}>
+                <div className={`flex max-sm:flex-col gap-2 sm:border-2 sm:border-slate-400 sm:p-4 p-2 sm:rounded-full ${selectedEle ? 'bg-white' : 'bg-slate-100'}`}>
 
                     <input
                         type="text"
@@ -223,7 +222,7 @@ const Canvas = () => {
                         disabled={!selectedEle}
                         value={text}
                         onChange={(e) => setText(e.target.value)}
-                        className='flex-1 focus:outline-none font-ubuntu disabled:bg-slate-100'
+                        className='flex-1 focus:outline-none font-ubuntu disabled:bg-slate-100 max-sm:border-2 max-sm:border-slate-400 max-sm:rounded-full max-sm:p-2'
                     />
 
                     <button
