@@ -88,7 +88,7 @@ const Canvas = () => {
 
                 {
                     elements && elements.map((ele) => (
-                        <Draggable bounds="parent" key={ele.id}>
+                        <Draggable bounds="parent" key={ele.id} onMouseDown={() => handleSelect(ele.id)}>
 
                             <div
                                 className={`inline-block p-3 m-2 rounded-xl cursor-pointer ${selectedEle && selectedEle == ele ? 'bg-blue-300' : 'bg-gray-400'}`}
